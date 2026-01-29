@@ -1,0 +1,204 @@
+body {
+  margin: 0;
+  background: #87ceeb;
+  font-family: sans-serif;
+  overflow-x: hidden;
+  height: 100vh;
+}
+
+.scene {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+
+/* Clouds */
+.cloud {
+  position: absolute;
+  top: 50px;
+  width: 120px;
+  height: 60px;
+  background: white;
+  border-radius: 60px;
+  box-shadow: 30px 10px 0 0 white, 60px 20px 0 0 white;
+  opacity: 0.8;
+  z-index: 5;
+}
+
+/* Cloud animations */
+@keyframes moveRight {
+  0% { left: -200px; }
+  100% { left: 100%; }
+}
+
+#cloud1 {
+  top: 50px;
+  width: 120px;
+  height: 60px;
+  animation: moveRight 40s linear infinite;
+}
+
+#cloud2 {
+  top: 100px;
+  width: 150px;
+  height: 70px;
+  animation: moveRight 50s linear infinite;
+}
+
+#cloud3 {
+  top: 70px;
+  width: 130px;
+  height: 65px;
+  animation: moveRight 60s linear infinite;
+}
+
+@keyframes moveLeft {
+  0% { left: -200px; }
+  100% { left: 100%; }
+}
+
+#cloud4 {
+  top: 90px;
+  width: 110px;
+  height: 55px;
+  animation: moveLeft 70s linear infinite;
+}
+
+#cloud5 {
+  top: 40px;
+  width: 140px;
+  height: 70px;
+  animation: moveLeft 80s linear infinite;
+}
+
+#cloud6 {
+  top: 120px;
+  width: 115px;
+  height: 60px;
+  animation: moveLeft 90s linear infinite;
+}
+
+
+/* Snowman hidden at first */
+.snowman {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: opacity 2s ease;
+  z-index: 10;
+}
+
+/* Base snowball */
+.base {
+  width: 160px;
+  height: 160px;
+  position: absolute;
+  bottom: 0;
+  left: 20px;
+  border-radius: 50%;
+  background: white;
+  z-index: 1;
+}
+
+/* Middle body */
+.body {
+  width: 120px;
+  height: 120px;
+  position: absolute;
+  bottom: 110px;
+  left: 40px;
+  border-radius: 50%;
+  background: white;
+  z-index: 2;
+}
+
+/* Head */
+.head {
+  width: 90px;
+  height: 90px;
+  position: absolute;
+  bottom: 220px;
+  left: 55px;
+  border-radius: 50%;
+  background: white;
+  z-index: 3;
+}
+
+/* Eyes */
+.eye {
+  width: 10px;
+  height: 10px;
+  background: black;
+  border-radius: 50%;
+  position: absolute;
+  top: 30px;
+  z-index: 5;
+}
+
+.eye.left { left: 25px; }
+.eye.right { right: 25px; }
+
+/* Nose */
+.nose {
+  width: 0;
+  height: 0;
+  border-left: 8px solid orange;
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  position: absolute;
+  top: 45px;
+  left: 45px;
+  z-index: 5;
+}
+
+/* Hat */
+.hat {
+  position: absolute;
+  bottom: 305px;
+  left: 66px;
+  z-index: 6;
+}
+
+.hat-top {
+  width: 60px;
+  height: 40px;
+  background: black;
+}
+
+.hat-brim {
+  width: 80px;
+  height: 10px;
+  background: black;
+  margin-left: -10px;
+}
+
+/* Snow Ground */
+.snow-ground {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0;
+  background: white;
+  z-index: 0;
+}
+
+/* Buttons */
+button {
+  padding: 10px 15px;
+  cursor: pointer;
+  z-index: 20;
+  position: absolute;
+  top: 20px;
+}
+
+#snowBtn {
+  right: 20px;
+}
+
+#resetBtn {
+  right: 200px;
+}
